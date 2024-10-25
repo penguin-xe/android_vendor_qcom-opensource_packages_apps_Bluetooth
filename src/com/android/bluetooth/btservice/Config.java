@@ -518,6 +518,7 @@ public class Config {
     }
 
     private static long getProfileMask(Class profile) {
+        Log.d(TAG, "getProfileMask, profile: " + profile);
         for (ProfileConfig config : PROFILE_SERVICES_AND_FLAGS) {
             if (config.mClass == profile) {
                 return config.mMask;
